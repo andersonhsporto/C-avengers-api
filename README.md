@@ -23,7 +23,7 @@ Para criar um usuário no banco de dados utilize o seguinte comando na cli do ma
 ```
 Além destes é necessário criar um banco de dados denominado `api_vingadores`.
 
-Para criar um banco de dados utilize o seguinte comando na cli do mariadb:
+Utilize o seguinte comando na cli do mariadb para criar um banco de dados:
 ```
     CREATE DATABASE 'api_vingadores';
 ```
@@ -31,9 +31,9 @@ Para criar um banco de dados utilize o seguinte comando na cli do mariadb:
 Este projeto utiliza diversas bibliotecas externas é recomendado que utilize
 o pacote base-devel em sistemas Arch ou o equivalente para a sua distribuição linux.
 
-Para instalar o pacote base-devel utilize o seguinte comando:
+Utilize o seguinte comando para instalar o pacote base-devel:
 ```
-    sudo pacman -S base-devel
+    $ sudo pacman -S base-devel
 ```
 
 Para compilar o projeto utilize o `make` este irá gerar o arquivo denominado
@@ -48,26 +48,29 @@ A versão completa dos dados utilizados pela api está disponível em: [avengers
 
 Header | Definição
 ---|---------
-`id`| O ID exclusivo do personagem
-`URL`| O URL do personagem de quadrinhos na Marvel Wikia
-`Name` | O nome completo do personagem
-`Alias` | O Apelido em inglês do personagem
-`Alias-br` | O Apelido em português do personagem
-`Appearances` | O número de histórias em quadrinhos em que o personagem apareceu até 30 de abril 
-`Current?` | O membro está atualmente ativo em uma equipe afiliada aos vingadores?
-`Gender` | O gênero registrado do personagem
+`id`| ID exclusivo do personagem
+`URL`| URL do personagem de quadrinhos na Marvel Wikia
+`Name` | Nome completo do personagem
+`Alias` | Apelido em inglês do personagem
+`Alias-br` | Apelido em português do personagem
+`Appearances` | Número de histórias em quadrinhos em que o personagem apareceu até 30 de abril 
+`Current?` | Membro está atualmente ativo em uma equipe afiliada aos vingadores?
+`Gender` | Gênero registrado do personagem
 `Probationary` | Às vezes, o personagem recebeu status probatório como um Vingador, esta é a data em que aconteceu
-`Full/Reserve` | O mês e ano em que o personagem foi apresentado como membro pleno ou reserva dos Vingadores
-`Year` | O mês e ano em que o personagem foi apresentado como membro pleno ou reserva dos Vingadores
+`Full/Reserve` | Mês e ano em que o personagem foi apresentado como membro pleno ou reserva dos Vingadores
+`Year` | Mês e ano em que o personagem foi apresentado como membro pleno ou reserva dos Vingadores
 `Years since joining` | 2015 menos o ano
-`Honorary` | O status do vingador, se eles receberam o status de "Vingador Honorário", se eles estão simplesmente na "Academia" ou "Full" caso contrário
+`Honorary` | Status do vingador, se eles receberam o status de "Vingador Honorário", se eles estão simplesmente na "Academia" ou "Full" caso contrário
 `Death1` | Sim se o Vingador morreu, Não se não
 `Return1` | Sim se o Vingador retornou de sua primeira morte, Não se não retornou, em branco se não aplicável
 `Death2` | Sim se o Vingador morreu uma segunda vez após seu renascimento, Não se não morreu, em branco se não for aplicável
 `Return2` | Sim se o Vingador retornou de sua segunda morte, Não se não retornou, em branco se não aplicável
-`Notes` | Descrições de mortes e ressurreições 
+`Notes` | Descrições de mortes e ressurreições
 
-É atribuído um *id* (numero inteiro positivo) para cada personagem ao iniciar a api, utilizando este é possível utilizar esse id com o método `GET`. Com o método `DELETE` é possível deletar o personagem do banco de dados utilizando seu id unico.
+É atribuído um *id* (numero inteiro positivo) para cada personagem ao iniciar a api.
+
+Este id pode ser utilizado no método `GET` para consultar as informações sobre o personagem.
+Utilizando este id com `DELETE` é possível deletar o personagem do banco de dados.
 
 Por exemplo: http://localhost:4242/id/7
 
@@ -152,9 +155,9 @@ que mostra um resumo das informações contidas no log da
 avengers api.
 
 Logviwer utiliza a biblioteca [readline](https://wiki.archlinux.org/title/readline)
-para realizar a instalação da readline em sistemas Arch utilize o seguinte comando
+para realizar a instalação da readline em sistemas Arch utilize o seguinte comando: 
 ```
-    pamac install readline
+    $ pamac install readline
 ```
 
 Para compilar o projeto utilize o `make` este irá gerar o arquivo denominado

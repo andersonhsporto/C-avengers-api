@@ -147,6 +147,13 @@ Por exemplo: http://localhost:4242/
     "Notes": Killed by The Hand. Later revived with The Stone of the Chaste
 }
 ```
+Está api retorna os seguintes "HTML status code"
+
+STATUS CODE | Definição
+---|---------
+`200 - OK`| Tudo funcionou como esperado
+`400 - Bad Request`| Falha na requisição
+
 
 ## CLI Logviewer (Visualizador de logs)
 
@@ -221,3 +228,8 @@ Utilizando [Logviwer] >>  root
 	*  DELETE    * /alias/  *       3        *
 	******************************************
 ```
+
+## REFERÊNCIAS
+* Informação Adicional - [Anotações](https://www.notion.so/Labs-API-36aba3aebcc84ce5a4f1c7e929ac32fa)
+* Informação Adicional - [C API mariadb](https://zetcode.com/db/mysqlc/)
+* Informação Adicional - [mariadb](https://mariadb.org/)

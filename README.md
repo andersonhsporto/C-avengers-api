@@ -13,8 +13,8 @@ A api utiliza uma [versão simplificada](https://github.com/42sp/42labs-selectio
 
 ### Instalação
 
-Para este projeto é criar um usuário no mariadb:
-A usuário está definido como `stark` e a senha padrão como `123`, 
+Para este projeto é necessario criar um usuário no mariadb:
+O usuário está definido como `stark` e a senha padrão como `123`,
 estes estão predefinidos nas macros `USER` e `PASS` dentro do header `header.h`.
 
 Para criar um usuário no banco de dados utilize o seguinte comando na cli do mariadb:

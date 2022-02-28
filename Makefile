@@ -7,7 +7,7 @@ INCLUDE		=	-I ./include
 HEADER		=	./include/headers.h
 HEADER_VI	= ./include/logvi.h
 
-LIBS	= -lcurl -ljson-c -lmicrohttpd -lssl -lcrypto -DMG_ENABLE_OPENSSL -pthread -lmysqlclient
+LIBS	= -lcurl -lssl -lcrypto -DMG_ENABLE_OPENSSL -pthread -lmysqlclient
 EFLAGS	= -lreadline
 LIBFT	= -L ./source/libs/libft/ -lft
 

@@ -39,6 +39,20 @@ Utilize o seguinte comando para instalar o pacote base-devel:
 Para compilar o projeto utilize o `make` este irá gerar o arquivo denominado
 `avengers_api`.
 
+### Docker
+
+Utilize a imagem do DockerHub:
+```
+    $ docker run -p 4242:4242 -d --name avengers_api andersonhsporto/avengers_api
+```
+
+Utilize o endereço `http://localhost:4242` para acessar a api.
+
+Para criar uma imagem Docker utilize o comando:
+
+```
+    $ docker build -t <NOME_DA_IMAGEM> .
+```
 ### URI
 A uri está prefixada em `http://localhost:4242`, este é definido pela macro `ADDRESS` no header `header.h`
 

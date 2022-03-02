@@ -48,6 +48,7 @@ Utilize a imagem do DockerHub:
 
 Utilize o endereço `http://localhost:4242` para acessar a api.
 
+### Criar imagem Docker
 Para criar uma imagem Docker utilize o comando:
 
 ```
@@ -244,6 +245,6 @@ Utilizando [Logviwer] >>  root
 ```
 
 ## REFERÊNCIAS
-* Informação Adicional - [Anotações](https://www.notion.so/Labs-API-36aba3aebcc84ce5a4f1c7e929ac32fa)
-* Informação Adicional - [C API mariadb](https://zetcode.com/db/mysqlc/)
-* Informação Adicional - [mariadb](https://mariadb.org/)
+* Informações adicionais - [Anotações](https://www.notion.so/Labs-API-36aba3aebcc84ce5a4f1c7e929ac32fa)
+* Informações adicionais - [C API mariadb](https://zetcode.com/db/mysqlc/)
+* Informações adicionais - [mariadb](https://mariadb.org/)

@@ -16,7 +16,12 @@ void	init_server(char *debug_status)
 // and infinite event loop
 void	start_listener(void)
 {
-	mg_http_listen(&g_net, ADDRESS, handler, NULL);
+	char	address[20];
+	char	*port = getenv("PORT");
+
+	sprintf(address, "http://0.0.0.0:%s", port);
+	mg_http_listen(&g_net, address, handler, NULL);
+	//mg_http_listen(&g_net, ADDRESS, handler, NULL);
 	while (g_com.com_flag)
 	{
 		mg_mgr_poll(&g_net, 1000);

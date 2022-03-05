@@ -1,4 +1,4 @@
-# Avengers API (Uma simples api em C)
+# Avengers API (Uma simples API em C)
 #### O objetivo deste projeto é construir uma API e uma aplicação de interface de linha de comando(CLI) em C.
 
 [Avengers Api](https://avengers-api-c.herokuapp.com/) utiliza uma [versão simplificada](https://github.com/42sp/42labs-selection-process-v2-andersonhsporto/blob/main/utils/vingadores.csv) dos dados sobre os personagens da Marvel Comics até 30 de abril de 2015, compilado por [Walt Hickey](https://fivethirtyeight.com/contributors/walt-hickey/).

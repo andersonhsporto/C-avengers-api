@@ -20,6 +20,7 @@ estes estão predefinidos nas macros `USER` e `PASS` dentro do header `header.h`
 Para criar um usuário no banco de dados utilize o seguinte comando na cli do mariadb:
 ```
     CREATE USER 'stark'@localhost IDENTIFIED BY '123';
+    
     "GRANT ALL PRIVILEGES ON * . * TO 'stark'@'localhost'";
 ```
 Além destes é necessário criar um banco de dados denominado `api_vingadores`.

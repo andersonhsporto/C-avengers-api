@@ -10,8 +10,6 @@ void	add_log(char *method, char *path, char *status,
 	temp = strtok(asctime(&tm), "\n");
 	fprintf(log_file, "[%s] Method: %s ", temp, method);
 	fprintf(log_file, "Path: %s ", path);
-	temp = extract_between(http->method.ptr, "User-Agent:","\nAccept");
 	fprintf(log_file, "Status: %s\n", status);
-	free(temp);
 	fclose(log_file);
 }

@@ -1,9 +1,12 @@
 #include "headers.h"
 
-int find_url(struct mg_http_message *http_input)
+int	find_url(struct mg_http_message *http_input)
 {
 	if (mg_http_match_uri(http_input, "/"))
 		return(root);
+	else if (mg_http_match_uri(http_input, "/id") || \
+	mg_http_match_uri(http_input, "/favicon.ico*"))
+		return(favicon);
 	else if (mg_http_match_uri(http_input, "/id") || \
 	mg_http_match_uri(http_input, "/id/*"))
 		return(id);

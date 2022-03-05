@@ -22,8 +22,8 @@ void	get_routes(struct mg_http_message *http_input,
 	method = get_method(http_input);
 	if (url == id && method == GET)
 		get_id(http_input, connec);
-	else if (url == alias && method == GET)
-		get_alias(http_input, connec);
+	else if (url == favicon && method == GET)
+		mg_http_reply(connec, 404, "./utils/favicon.ico", "");
 	else if (url == id && method == DELETE)
 		delete_id(http_input, connec);
 	else if (url == alias && method == DELETE)

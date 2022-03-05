@@ -61,6 +61,7 @@ enum e_url
 	root,
 	id,
 	alias,
+	favicon, 
 	no_client_flag = 0
 };
 

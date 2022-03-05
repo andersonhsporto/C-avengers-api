@@ -67,7 +67,7 @@ void	send_json(struct mg_connection *connec)
 
 	json_buff = (char *)calloc(sizeof(char *), g_com.json_struc.len);
 	mjson_snprintf(json_buff,
-			g_com.json_struc.len + 450,
+			g_com.json_struc.len + 500,
 			"{%Q: %d, %Q: %s, %Q: %s, %Q: %s, %Q: %s, %Q: %s, %Q: %s, %Q: %s, %Q: %s, %Q: %s, %Q: %d, %Q: %d, %Q: %s, %Q: %s, %Q: %s, %Q: %s, %Q: %s, %Q: %s}",
 			"id", atoi(g_com.json_struc.id),
 			"URL", g_com.json_struc.url,

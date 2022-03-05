@@ -11,13 +11,13 @@
 # include "struct.h"
 # include "logvi.h"
 
-# define ADDRESS "http://0.0.0.0:4242"
+# define ADDRESS "sql10.freemysqlhosting.net"
 
 # define PORT_DB 3306
-# define USER "stark"
-# define PASS "123"
-# define HOST "localhost"
-# define DB "api_vingadores"
+# define USER "sql10476302"
+# define PASS "wW6CfDSIjS"
+# define HOST "sql10.freemysqlhosting.net"
+# define DB "sql10476302"
 
 # define STRUCT "CREATE TABLE `avengers` (id INT PRIMARY KEY AUTO_INCREMENT, \
 `URL` VARCHAR(255), `NAME` VARCHAR(255), `ALIAS` VARCHAR(255), \

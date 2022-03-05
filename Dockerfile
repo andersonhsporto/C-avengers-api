@@ -11,17 +11,17 @@ RUN apt-get install -y glibc-source libmysqlclient-dev
 EXPOSE 3306
 EXPOSE 4242
 
-LABEL version="1.0"
-LABEL description="MariaDB Server"
+# LABEL version="1.0"
+# LABEL description="MariaDB Server"
 
-HEALTHCHECK --start-period=5m \
-	CMD mariadb -e 'SELECT @@datadir;' || exit 1
-CMD service mariadb start
+# HEALTHCHECK --start-period=5m \
+# 	CMD mariadb -e 'SELECT @@datadir;' || exit 1
+# CMD service mariadb start
 
 COPY . /usr/src/api
 WORKDIR /usr/src/api
 
-ENTRYPOINT ["./init.sh"]
+ENTRYPOINT ["./avengers_api"]
 # CMD ["./avengers_api"]
 
 # RUN ldconfig

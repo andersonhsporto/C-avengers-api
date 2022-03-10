@@ -13,10 +13,8 @@ void	init_server(char *debug_status)
 void	start_listener(void)
 {
 	char	api_address[20];
-	char	*port = getenv("PORT");
 
-	sprintf(api_address, "http://0.0.0.0:%s", port);
-	mg_http_listen(&g_net, api_address, handler, NULL);
+	mg_http_listen(&g_net, ADDRESS, handler, NULL);
 	while (g_com.com_flag)
 	{
 		mg_mgr_poll(&g_net, 1000);

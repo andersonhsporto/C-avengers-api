@@ -178,8 +178,8 @@ Logviewer é uma interface de linha de comando
 que mostra um resumo das informações contidas no log da
 avengers api.
 
-Logviwer utiliza a biblioteca [readline](https://wiki.archlinux.org/title/readline)
-para realizar a instalação da readline em sistemas Arch utilize o seguinte comando: 
+logviwer utiliza a biblioteca [readline](https://wiki.archlinux.org/title/readline),
+para realizar a instalação desta em sistemas Arch utilize o seguinte comando: 
 ```
     $ pamac install readline
 ```

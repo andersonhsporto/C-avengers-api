@@ -30,7 +30,7 @@ Utilize o seguinte comando na cli do mariadb para criar um banco de dados:
     CREATE DATABASE 'api_vingadores';
 ```
 
-Este projeto utiliza diversas bibliotecas externas é recomendado que utilize
+Este projeto utiliza algumas bibliotecas externas, é recomendado que utilize
 o pacote base-devel em sistemas Arch ou o equivalente para a sua distribuição linux.
 
 Utilize o seguinte comando para instalar o pacote base-devel:

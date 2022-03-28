@@ -247,6 +247,5 @@ Utilizando [Logviwer] >>  root
 ```
 
 ## REFERÊNCIAS
-* Informações adicionais - [Anotações](https://www.notion.so/Labs-API-36aba3aebcc84ce5a4f1c7e929ac32fa)
 * Informações adicionais - [C API mariadb](https://zetcode.com/db/mysqlc/)
 * Informações adicionais - [mariadb](https://mariadb.org/)

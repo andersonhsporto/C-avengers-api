@@ -202,7 +202,7 @@ Comando | Definição
 #### Exemplos:
 Utilizando [Logviwer] >>  get
 ```bash
-
+[Logviwer] >>  get
 
 	Method:	GET
 	*****************************
@@ -230,7 +230,9 @@ Utilizando [Logviwer] >>  delete
 ```
 Utilizando [Logviwer] >>  root
 ```bash
-	root
+[Logviwer] >>  root
+
+	Method:	root
 	******************************************
 	*  METHOD    *  PATH    * Total Requests *
 	******************************************

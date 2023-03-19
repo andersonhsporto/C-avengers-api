@@ -1,37 +1,37 @@
-# Avengers API (Uma simples API em C)
-#### O objetivo deste projeto é construir uma API e uma aplicação de interface de linha de comando(CLI) em C.
+# Avengers API
 
-Avengers Api utiliza uma [versão simplificada](https://github.com/42sp/42labs-selection-process-v2-andersonhsporto/blob/main/utils/vingadores.csv) de alguns dados sobre os personagens da Marvel Comics até 30 de abril de 2015, compilado por [Walt Hickey](https://fivethirtyeight.com/contributors/walt-hickey/).
+&emsp; Avengers API é uma API REST criada para própositos de estudo,
+utilizando a linguagem C e o framework Mongoose.
+Esta permite a consulta de dados sobre os personagens da Marvel Comics.
+
+&emsp; Além da API, este projeto também possui um cliente em C denominado `Logviewer`, este cliente permite a consulta dos dados de log da api.
+
+# Documentação
+
+Avengers Api utiliza uma [versão simplificada](https://github.com/42sp/42labs-selection-process-v2-andersonhsporto/blob/main/utils/vingadores.csv) de alguns dados sobre os personagens da Marvel Comics compilado por [Walt Hickey](https://fivethirtyeight.com/contributors/walt-hickey/).
 
 ### Tecnologias
 
-- [ANSI C ](https://www.ansi.org/) 
-- [Mongoose](https://mongoose.ws/) 
-- [mJson](https://github.com/cesanta/mjson) 
-- [Mariadb](https://mariadb.org/)
-- [Postman](https://www.postman.com/)
+- [ANSI C ](https://www.ansi.org/) - Linguagem de programação
+- [Mongoose](https://mongoose.ws/) - Framework para desenvolvimento de aplicações web
+- [mJson](https://github.com/cesanta/mjson) - Biblioteca para manipulação de arquivos JSON
+- [Mariadb](https://mariadb.org/) - Banco de dados relacional
+- [Postman](https://www.postman.com/) - Ferramenta para testar e documentar APIs
+- [Libft](https://github.com/andersonhsporto/ft-libft) - Biblioteca de funções em C
 
 ### Instalação
 
-Para este projeto é necessario criar um usuário no mariadb:
-O usuário está definido como `stark` e a senha padrão como `123`,
-estes estão predefinidos nas macros `USER` e `PASS` dentro do header `header.h`.
+Para este projeto é necessario ter instalado o [mariadb](https://mariadb.org/), o [gcc](https://gcc.gnu.org/) e o [make](https://www.gnu.org/software/make/).
 
-Para criar um usuário no banco de dados utilize o seguinte comando na cli do mariadb:
-```
-    CREATE USER 'stark'@localhost IDENTIFIED BY '123';
-    
-    "GRANT ALL PRIVILEGES ON * . * TO 'stark'@'localhost'";
-```
-Além destes é necessário criar um banco de dados denominado `api_vingadores`.
 
-Utilize o seguinte comando na cli do mariadb para criar um banco de dados:
-```
-    CREATE DATABASE 'api_vingadores';
-```
+O usuário padrão está definido como `userStark` e a senha padrão como `strongpassword`,
+estes estão predefinidos nas macros `USER` e `PASS` dentro do header `env.h`.
+além destes a api utiliza um banco de dados denominado `api_vingadores` definido na macro `DB` no mesmo header.
+
 
 Este projeto utiliza algumas bibliotecas externas, é recomendado que utilize
 o pacote base-devel em sistemas Arch ou o equivalente para a sua distribuição linux.
+
 
 Utilize o seguinte comando para instalar o pacote base-devel:
 ```
@@ -41,23 +41,44 @@ Utilize o seguinte comando para instalar o pacote base-devel:
 Para compilar o projeto utilize o `make` este irá gerar o arquivo denominado
 `avengers_api`.
 
-### Docker
+### Docker Compose
 
-Utilize a imagem do DockerHub:
+O docker compose automatiza a criação de containers, para utiliza-lo basta executar o comando:
+
+```
+	$ docker-compose up -d
+```
+
+### Dockerhub
+
+Uma imagem docker da api está disponível no dockerhub no link [andersonhsporto/avengers_api](https://hub.docker.com/r/andersonhsporto/avengers_api)
+
+Para executar a imagem utilize o comando:
+
 ```
     $ docker run -p 4242:4242 -d --name avengers_api andersonhsporto/avengers_api
 ```
 
 Utilize o endereço `http://localhost:4242` para acessar a api.
 
+
 ### Criar imagem Docker
-Para criar uma imagem Docker utilize o comando:
+
+Para criar uma imagem local utilize o comando:
 
 ```
     $ docker build -t <NOME_DA_IMAGEM> .
 ```
+
+e para executar a imagem utilize o comando:
+
+```
+	$ docker run -p 4242:4242 -d --name avengers_api <NOME_DA_IMAGEM>
+```
+
 ### URI
-A uri está prefixada em `http://localhost:4242`, este é definido pela macro `ADDRESS` no header `header.h`
+
+A uri está prefixada em `http://localhost:4242`, este é definido pela macro `ADDRESS` no header `env.h`
 
 ### Dados
 
@@ -248,6 +269,9 @@ Utilizando [Logviwer] >>  root
 	******************************************
 ```
 
-## REFERÊNCIAS
+## Referências
 * Informações adicionais - [C API mariadb](https://zetcode.com/db/mysqlc/)
 * Informações adicionais - [mariadb](https://mariadb.org/)
+* Informações adicionais - [C API readline](https://www.gnu.org/software/readline/)
+* Informações adicionais - [readline](https://wiki.archlinux.org/title/readline)
+* Informações adicionais - [C API curl](https://curl.se/libcurl/c/)

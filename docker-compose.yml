@@ -1,0 +1,11 @@
+services:
+  app:
+    image: 'avengers-api-v1:latest'
+    container_name: api-avengers
+    build:
+      context: .
+    ports:
+      - '4242:4242'
+
+volumes:
+  volumes:

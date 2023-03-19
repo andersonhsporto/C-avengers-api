@@ -105,6 +105,8 @@ Header | Definição
 `Return2` | Sim se o Vingador retornou de sua segunda morte, Não se não retornou, em branco se não aplicável
 `Notes` | Descrições de mortes e ressurreições
 
+### Utilização
+
 É atribuído um *id* (numero inteiro positivo) para cada personagem ao iniciar a api.
 
 Este id pode ser utilizado no método `GET` para consultar as informações sobre o personagem.
